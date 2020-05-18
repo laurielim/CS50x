@@ -1,0 +1,249 @@
+:root {
+  --color-bg: #233237 !important;
+  --color: white !important;
+  --link: orange !important;
+  --link-hover: #E0AA38 !important;
+  --link-text: black !important;
+}
+
+
+[data-theme="light"] {
+  --color-bg: white !important;
+  --color: black !important;
+  --link: dodgerblue !important;
+  --link-hover: RGBA(30, 144, 255, 0.75) !important;
+  --link-text: white !important;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color);
+  position: relative;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #0E1416;
+  overflow: hidden;
+  padding: 0 3%;
+  width: 100%
+}
+
+
+main {
+  padding: 2% 5%;
+  padding-bottom: 5rem;
+}
+
+footer {
+  background-color: #0E1416;
+  overflow: hidden;
+  padding: 0 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  height: 5rem; 
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  color: #CCC;
+  text-decoration: none;
+}
+
+h3 {
+  padding-bottom: 2%;
+}
+
+.navbar a{
+color: white !important;
+}
+
+.nav-item {
+  margin: 5px;
+}
+
+.nav-link {
+  width: 90px;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: var(--link-hover);
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item a.active {
+  background-color: var(--link);
+  color: var(--link-hover)
+
+}
+
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  width: 30px;
+  height: 17px;
+  margin: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CCC;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: orange;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px orange;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+}
+
+.breadcrumb a {
+  color: var(--link);
+}
+
+.breadcrumb a:hover {
+  color: var(--link-hover);
+}
+
+.intro {
+  padding: 12.5% 0;
+  text-align: center;
+}
+
+.section {
+  padding: 5% 0;
+}
+
+.testimonial h2,
+.testimonial p {
+  text-align: center;
+}
+
+.row {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.card {
+  color: black;
+  margin-bottom: 15px;
+  width: 350px;
+}
+
+.btn {
+  border-color: transparent;
+  background-color: var(--link);
+  color: var(--link-text);
+}
+
+.btn:hover {
+  border-color: transparent;
+  background-color: var(--link-hover);
+  color: var(--link-text);
+}
+
+.btn:focus {
+  border-color: transparent;
+  background-color: var(--link);
+  color: var(--link-text);
+}
+
+.btn:active {
+  border-color: transparent;
+  background-color: var(--link);
+  color: var(--link-text);
+}
+
+.contact-form { 
+  margin: 2% auto 5% auto;
+  width:80%;
+  background-color: #CCC;
+  color: black;
+  padding: 2% 3%;
+  border-radius: 10px;
+}
+
+.center {
+  display: block;
+  margin: 2% auto;
+  width: 50%;
+}
+
+.project-section {
+  padding: 2% 10%
+}
+
+textarea, input[type=text], input[type=email] {
+  width: 100%;
+}
+
+textarea {
+  height: 200px;
+}
+
+
+
+
+
