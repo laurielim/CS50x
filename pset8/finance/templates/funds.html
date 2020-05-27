@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Funds
+{% endblock %}
+
+{% block main %}
+    <h1>Funds</h1>
+
+    <form action="/funds" method="post">
+        <div class="form-group">
+            <select name="action" id="action" class="form-control">
+              <option value="deposit">Deposit</option>
+              <option value="withdraw">Withdraw</option>
+             </select>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="amount" placeholder="Amount" type="number"  step="0.01" min="0.01">
+        </div>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,201 @@
+:root {
+  --color-bg: #233237 !important;
+  --color: white !important;
+  --table-border: #182326 !important;
+  --table-color: #1C282C !important;
+  --link: orange !important;
+  --link-hover: #E0AA38 !important;
+  --link-text: black !important;
+  --btn-font: 500 !important;
+  --focus-border: 2px solid orange !important;
+}
+
+
+[data-theme="light"] {
+  --color-bg: white !important;
+  --color: black !important;
+  --table-border: #DDD !important;
+  --table-color: #EEE !important;
+  --link: dodgerblue !important;
+  --link-hover: RGBA(30, 144, 255, 0.75) !important;
+  --link-text: white !important;
+  --btn-font: 400 !important;
+  --focus-border: 1px solid  dodgerblue !important;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color);
+}
+
+nav  {
+  background-color: #0E1416;
+}
+
+nav a {
+color: white !important;
+}
+
+nav a:hover {
+color: #CCC !important;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+h1 {
+    padding-bottom: 10px;
+}
+
+table tr {
+    height: 50px;
+    border-top: 2px solid var(--table-border);
+}
+
+table tr:nth-child(even) {
+  background-color: var(--table-color);
+}
+table tr:nth-child(odd) {
+  background-color: var(--color-bg);
+}
+
+.btn {
+  background-color: var(--link);
+  color: var(--link-text);
+  border: none;
+  font-weight: var(--btn-font);
+}
+
+.btn:hover {
+  background-color: var(--link-hover);
+  color: var(--link-text);
+  border: none;
+}
+
+footer a,
+main a {
+  color: var(--link);
+}
+
+footer a:hover,
+main a:hover {
+  color: var(--link-hover);
+}
+
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  width: 30px;
+  height: 17px;
+  margin: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CCC;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: orange;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px orange;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.last_row {
+  var(--color-bg);
+}
+
+.form-control:focus,
+.btn:focus {
+  box-shadow: none;
+  border: var(--focus-border);
+}
