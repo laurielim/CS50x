@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    PoMa
+{% endblock %}
+
+{% block navbar %}
+    <ul class="navbar-nav mr-auto mt-2">
+        <li class="nav-item"><a class="nav-link active" href="/">Timer</a></li>
+        <li class="nav-item"><a class="nav-link" href="/settings">Settings</a></li>
+    </ul>
+{% endblock %}
+
+{% block main %}
+    <div aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb- active"><a href="index.html">Home</a></li>
+        </ol>
+    </div>
+    <span id="display"><span id="setpomo">{{ pomo }}</span>:00</span><br>
+    <!-- https://css-tricks.com/building-progress-ring-quickly -->
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" id="progress" style="width: 0%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <p></p>
+    <button id="trigger" class="btn btn-outline-primary btn-lg">Start</button>
+    {{ task }}
+{% endblock %}
+
+{% block script %}
+<script>
+    // Assign to variable
+    let chosenChime = {{ chime }},
+        chime = 0;
+    // Switch case:
+    switch (chosenChime) {
+        case 1:
+            chime = new Audio('/static/Ticket-machine-sound.mp3');
+            break
+        case 2:
+            chime = new Audio('/static/you-have-new-message.mp3');
+            break
+    }
+
+</script>
+<script async type="text/javascript" src="{{ url_for('static', filename='timer.js') }}"></script>
+{% endblock %}

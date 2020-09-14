@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block navbar %}
+    <ul class="navbar-nav mr-auto mt-2">
+        <li class="nav-item"><a class="nav-link" href="/">Timer</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/settings">Settings</a></li>
+    </ul>
+{% endblock %}
+
+
+{% block main %}
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Settings</li>
+    </ol>
+    <form action="/settings" method="post">
+        <div class="form-group setting-form">
+            <h2>Notification Sound:</h2>
+            <select class="form-control" id="chime" name="chime">
+                 <option value="1">Chime 1</option>
+                 <option value="2">Chime 2</option>
+            </select>
+        </div>
+        <div class="form-group setting-form">
+            <h2>Timer duration:</h2>
+            <input class="form-control" id="pomo" name="pomo" value="{{ pomo }}" type="number" min="1" max="999" style="width: 75px; text-align:center;"> minutes
+        </div>
+        <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+{% endblock %}
+
+{% block script %}
+<script>
+    function setSelectValue (id, val) {
+    document.getElementById(id).value = val;
+    }
+    setSelectValue('chime', {{ chime }});
+</script>
+
+{% endblock %}
